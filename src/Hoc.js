@@ -7,7 +7,7 @@ export default function Confirmation ( Component ) {
         state = {
             isVisible: true
         }
-    
+        
         handleClick = ( { target: { dataset } } ) => {
             const { val } = dataset
             this.setState({ isVisible: false, val })
@@ -42,3 +42,5 @@ Confirmation.defaultProps = {
   accept: () => null,
   decline: () => null
 }
+
+// Working with HOC
