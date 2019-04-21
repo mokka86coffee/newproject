@@ -2,11 +2,9 @@ import React from 'react'
 import Hoc from './Hoc'
 import PropTypes from 'prop-types'
 
-class Notification extends React.Component {
-    
-  render() {
+function Notification (props) {
 
-    const { type, message } = this.props;
+    const { type, message } = props;
 
     if ( !message ) return null
 
@@ -19,10 +17,9 @@ class Notification extends React.Component {
     return (
       <div className={ classes }>
         { message }
-        { this.props.children }
+        { props.children }
       </div>
     ) 
-  }
 }
 
 Notification.propTypes = {
