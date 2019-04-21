@@ -8,9 +8,8 @@ export default function Confirmation ( Component ) {
             isVisible: true
         }
         
-        handleClick = ( { target: { dataset } } ) => {
-            const { val } = dataset
-            this.setState({ isVisible: false, val })
+        handleClick = () => {
+            this.setState({ isVisible: false })
             this.props[val]()
         }
         
