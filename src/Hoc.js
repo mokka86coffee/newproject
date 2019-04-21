@@ -46,4 +46,3 @@ Confirmation.defaultProps = {
 // Working with HOC
 // Working with HOC2
 // Working with HOC3
-// Working with HOC4
