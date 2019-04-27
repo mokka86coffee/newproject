@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Button from '@material-ui/core/Button';
 import DevTools from 'mobx-react-devtools';
 import { observable } from 'mobx';
 import { observer } from 'mobx-react';
@@ -11,16 +12,20 @@ import { observer } from 'mobx-react';
 
     @observable count = 0;
     
-    handleCount = () => {}
+    handleCount = (e) => {
+        this.count = e.target.innerText.includes('-')
+            ? this.count - 1
+            : this.count + 1
+    }
 
     render() {
         return (
             <div className="app">
-                <DevTools />
+                <DevTools position="topRight" />
                 <h1>Mobx счетчик</h1>
                 <h2>{ this.count }</h2>
-                <button>-1</button>
-                <button>+1</button>
+                <Button onClick={ this.handleCount }>-1</Button>
+                <Button onClick={ this.handleCount }>+1</Button>
             </div>
         )
     }

@@ -69,9 +69,11 @@
   ],
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.4",
+    "@material-ui/core": "^3.9.3",
     "classnames": "^2.2.6",
     "mobx-react-devtools": "^6.1.1",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "typescript": "^3.4.5"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -125,7 +127,9 @@
     "plugins": [
       [
         "@babel/plugin-proposal-decorators",
-        { "legacy": true }
+        {
+          "legacy": true
+        }
       ]
     ]
   }
