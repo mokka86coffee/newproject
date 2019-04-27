@@ -8,9 +8,9 @@ export default function Confirmation ( Component ) {
             isVisible: true
         }
         
-        handleClick = () => {
+        handleClick = (e) => {
             this.setState({ isVisible: false })
-            this.props[val]()
+            this.props[e.dataset.val]()
         }
         
         render () {
@@ -21,7 +21,7 @@ export default function Confirmation ( Component ) {
             return (
                 <Component { ...this.props } >
                     <div data-val='accept' onClick={ this.handleClick } className="btn btn-primary">OK</div>
-                    <div  data-val='decline' onClick={ this.handleClick } className="btn btn-danger">Cancel</div>
+                    <div data-val='decline' onClick={ this.handleClick } className="btn btn-danger">Cancel</div>
                 </Component>
             )
         }
