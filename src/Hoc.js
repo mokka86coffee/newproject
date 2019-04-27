@@ -10,7 +10,7 @@ export default function Confirmation ( Component ) {
         
         handleClick = (e) => {
             this.setState({ isVisible: false })
-            this.props[e.dataset.val]()
+            this.props[e.target.dataset.val]()
         }
         
         render () {
@@ -41,7 +41,3 @@ Confirmation.defaultProps = {
   accept: () => null,
   decline: () => null
 }
-
-// Working with HOC
-// Working with HOC2
-// Working with HOC2 (dev)
